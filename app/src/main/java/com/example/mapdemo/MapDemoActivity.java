@@ -345,7 +345,8 @@ public class MapDemoActivity extends AppCompatActivity implements
 			Toast.makeText(this, "GPS location was found!", Toast.LENGTH_SHORT).show();
 			LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
 			CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(latLng, 17);
-			map.animateCamera(cameraUpdate);
+
+            map.animateCamera(cameraUpdate);
         } else {
 			Toast.makeText(this, "Current location was null, enable GPS on emulator!", Toast.LENGTH_SHORT).show();
 		}
